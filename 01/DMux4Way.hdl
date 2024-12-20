@@ -26,4 +26,8 @@ CHIP DMux4Way {
     And(a=in, b=not0, out=outc);
     And(a=outc, b=sel[1], out=c);
     And(a=outb, b=sel[1], out=d);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 94191b7f93b5b5aac9088efa88fd1d563c2f5df5
