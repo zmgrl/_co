@@ -40,4 +40,11 @@ CHIP CPU {
 
     PARTS:
     // Put your code here:
+    Mux16(a=instruction, b=al1, sel=true, out=t1); //al1->alu
+    A Register(in=t1, load=false, out=t2, out=otpc, out=addressM); //otpc->pc
+    Mux16(a=inM, b=t2, sel=false, out=t3); //->alu
+    D Register(in=al1, load=true, out=t4); //->alu
+    ALU(x=t3, y=t4, zx=false, zy=true, nx=true, ny=true, f=true, no=true, out=outM, zr=, ng=);
+    PC()
+
 }
